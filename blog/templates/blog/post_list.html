@@ -7,17 +7,11 @@
 			<h1><a href=""> Django Girls Blog</a></h1>
 		</div>
 
-		<div>
-			<p>pubished :14.06.2014, 12:14</p>
-			<h2><a href=""> My first post</a></h2>
-			<p>Lucas es el perrito mas bonito. Lucas es el perrito mas bonito.Lucas es el perrito mas bonito.</p>
-		</div>
-
-		<div>
-			<p>puclished hoy</p>
-			<h2><a href=""<My second post</a></h2>
-			<p>Lucas es el perrito mas bonito.Lucas es el perrito mas bonito.Lucas es el perrito mas bonito.</p>
-		</div>
+		{% for post in posts %}
+			<p>pubished : {{ post.published_date}} </p>
+			<h1><a href=""> {{post.title}}</a></h1>
+		</div>	
+		{% endfor%}
 
 
 	</body>
